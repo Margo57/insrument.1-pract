@@ -1,0 +1,305 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 100%;
+	font-family: sans-serif;
+	color: #646464;
+}
+
+a {
+	color: #646464;
+	text-decoration: none;
+}
+
+header, 
+.centering {
+	width: 90%;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	border-bottom: 1px solid #E0E0E0;
+	padding: 15px 0;
+}
+
+header > a:first-child {
+	width: 71px;
+}
+
+header > a:first-child img {
+	width: 100%;
+	vertical-align: bottom;
+}
+
+header form {
+	padding-top: 5px;
+}
+
+header form input[type="search"] {
+	display: inline-block;
+	vertical-align: bottom;
+	width: 360px;
+	height: 35px;
+	border: 1px solid #E0E0E0;
+	border-right: 0;
+	border-radius: 3px 0 0 3px;
+	font-size: 14px;
+	padding: 0 13px;
+}
+
+header form input[type="submit"] {
+	display: inline-block;
+	vertical-align: bottom;
+	width: 35px;
+	height: 35px;
+	margin-left: -4.5px;
+	border: 1px solid #E0E0E0;
+	border-radius:  0 3px 3px 0;
+	background: transparent url(img/search.png) no-repeat center center;
+}
+
+nav {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav ul li a {
+	font-size: 14px;
+	color: #000;
+}
+
+header > div > a {
+	display: inline-block;
+	vertical-align: middle;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #979797;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-left: 10px;
+}
+
+header > div > a img {
+	width: 100%;
+}
+
+body > .centering {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+body section > h2 {
+	font-size: 14px;
+	color: #646464;
+	line-height: 19px;
+	font-weight: 200;
+}
+
+body > .centering > section {
+	padding: 30px 0;
+	padding-right: 16px;
+	width: 100%;
+}
+
+body > .centering > section > h2 {
+	margin-bottom: 19px;
+}
+
+body > .centering > section > a {
+	display: block;
+}
+
+section article {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 4px 10px;
+}
+
+section article figure {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	margin-right: 20px;
+}
+
+section article figure::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0, .4) url(img/play-btn-white.png) no-repeat center center;
+	background-size: 14px;
+	opacity: 0;
+	transition: all .4s;
+}
+
+section article:hover figure::before {
+	opacity: 1;
+}
+
+section article figure img {
+	width: 100%;
+}
+
+section article h2 {
+	font-size: 14px;
+	text-align: left;
+}
+
+section article h3 {
+	font-size: 10px;
+	font-weight: 200;
+}
+
+section article span {
+	font-size: 10px;
+	margin-left: auto;
+}
+
+section button {
+	display: block;
+	width: 148px;
+	padding: 8px 0;
+	margin: 20px auto;
+	font-size: 10px;
+	line-height: 13px;
+	background: none;
+	border: 1px solid #CCCCCC;
+	border-radius: 2px;
+}
+
+body > .centering > aside {
+	width: 300px;
+	padding: 30px;	
+	border-left: 1px solid #EFEFEF;
+	flex-shrink: 0;
+	text-align: center;
+}
+
+body > .centering > aside > img {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+body > .centering > aside > h2 {
+	font-size: 20px;
+	line-height: 26px;
+	margin-bottom: 5px;
+}
+
+body > .centering > aside > h3 {
+	font-size: 14px;
+	line-height: 19px;
+	font-weight: 200;
+	margin-bottom: 20px;
+}
+
+#progress-bar {
+	height: 6px;
+	border-radius: 3px;
+	background: #F3F3F3;
+	position: relative;
+	margin-bottom: 4px;
+}
+
+#progress-bar::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 13%;
+	border-radius: 3px;
+	background: #4990E2;
+}
+
+#progress-bar ~ span {
+	text-align: left;
+	font-size: 9px;
+	line-height: 11px;
+	width: 50%;
+    display: inline-block;
+	margin-left: -10.5px;
+	margin-right: 10.5px;
+}
+
+aside button {
+	width: 55px;
+	height: 55px;
+	border: 0;
+}
+
+aside button:nth-of-type(1) {
+	background: url(img/track-btn.png) no-repeat center center;
+	transform: rotate(180deg);
+	background-size: 30px;
+}
+
+aside button:nth-of-type(2) {
+	border: 1px solid #979797;
+	border-radius: 50%;
+	background: url(img/play-btn.png) no-repeat 15px center;
+	background-size: 30px;
+}
+
+aside button:nth-of-type(3) {
+	background: url(img/track-btn.png) no-repeat center center;
+	background-size: 30px;
+}
+
+#progress-bar ~ span:last-of-type {
+	text-align: right;
+	margin-left: 10.5px;
+	margin-right: -10.5px;
+}
+
+body > .centering > aside section {
+	margin-left: -10.5px;
+	margin-right: -10.5px;
+}
+
+body > .centering > aside section > h2 {
+	padding-bottom: 7px;
+	border-bottom: 1px solid #F3F3F3;
+	margin-bottom: 15px;
+	margin-top: 30px;
+	text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+	
+	header form input[type="search"] {
+		width: auto;
+	}
+
+	body > .centering > aside {
+		width: 100%;
+		order: -1;
+	}
+
+	header form {
+		order: 3;
+	}
+}
+
+@media screen and (max-width: 500px) {
+
+	header form {
+		order: 3;
+	}
+}
